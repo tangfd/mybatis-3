@@ -26,6 +26,19 @@ public class PrimitiveSubject {
   private final boolean active;
   private final Date dt;
 
+  @Override
+  public String toString() {
+    return "PrimitiveSubject{" +
+      "id=" + id +
+      ", name='" + name + '\'' +
+      ", age=" + age +
+      ", height=" + height +
+      ", weight=" + weight +
+      ", active=" + active +
+      ", dt=" + dt +
+      '}';
+  }
+
   public PrimitiveSubject(final int id, final String name, final int age, final int height, final int weight, final boolean active, final Date dt) {
     this.id = id;
     this.name = name;
@@ -34,5 +47,6 @@ public class PrimitiveSubject {
     this.weight = weight;
     this.active = active;
     this.dt = dt;
+    System.out.println(toString());
   }
 }

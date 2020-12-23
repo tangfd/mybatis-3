@@ -26,7 +26,25 @@ public class ExtensiveSubject {
     private final boolean aBoolean;
     private final String aString;
 
-    // enum types
+  @Override
+  public String toString() {
+    return "ExtensiveSubject{" +
+      "aByte=" + aByte +
+      ", aShort=" + aShort +
+      ", aChar=" + aChar +
+      ", anInt=" + anInt +
+      ", aLong=" + aLong +
+      ", aFloat=" + aFloat +
+      ", aDouble=" + aDouble +
+      ", aBoolean=" + aBoolean +
+      ", aString='" + aString + '\'' +
+      ", anEnum=" + anEnum +
+      ", aClob='" + aClob + '\'' +
+      ", aBlob='" + aBlob + '\'' +
+      '}';
+  }
+
+  // enum types
     private final TestEnum anEnum;
 
     // array types
@@ -59,6 +77,7 @@ public class ExtensiveSubject {
         this.anEnum = anEnum;
         this.aClob = aClob;
         this.aBlob = aBlob;
+      System.out.println(toString());
     }
 
     public enum TestEnum {

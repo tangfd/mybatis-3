@@ -22,12 +22,24 @@ public class BadSubject {
   private final Height height;
   private final Double weight;
 
+  @Override
+  public String toString() {
+    return "BadSubject{" +
+      "id=" + id +
+      ", name='" + name + '\'' +
+      ", age=" + age +
+      ", height=" + height +
+      ", weight=" + weight +
+      '}';
+  }
+
   public BadSubject(final int id, final String name, final int age, final Height height, final Double weight) {
     this.id = id;
     this.name = name;
     this.age = age;
     this.height = height;
     this.weight = weight == null ? 0 : weight;
+    System.out.println(toString());
   }
 
   private class Height {

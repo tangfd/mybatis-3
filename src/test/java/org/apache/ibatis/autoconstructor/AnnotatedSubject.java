@@ -30,6 +30,7 @@ public class AnnotatedSubject {
     this.age = age;
     this.height = height;
     this.weight = weight;
+    System.out.println(toString());
   }
 
   @AutomapConstructor
@@ -39,5 +40,17 @@ public class AnnotatedSubject {
     this.age = age;
     this.height = height == null ? 0 : height;
     this.weight = weight == null ? 0 : weight;
+    System.out.println(toString());
+  }
+
+  @Override
+  public String toString() {
+    return "AnnotatedSubject{" +
+      "id=" + id +
+      ", name='" + name + '\'' +
+      ", age=" + age +
+      ", height=" + height +
+      ", weight=" + weight +
+      '}';
   }
 }
